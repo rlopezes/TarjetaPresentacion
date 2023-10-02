@@ -58,9 +58,9 @@ fun TarjetaPresentacion(modifier: Modifier = Modifier) {
             .fillMaxSize()
             .background(Color(0xFFB9E1CF))
     ) {
-        TituloTarjeta()
-        Spacer(Modifier.height(150.dp))
-        DatosTarjeta()
+        TituloTarjeta(modifier)
+        Spacer(Modifier.height(100.dp))
+        DatosTarjeta(modifier)
     }
 }
 
@@ -71,13 +71,13 @@ fun TituloTarjeta(modifier: Modifier = Modifier) {
         modifier = modifier
             .fillMaxWidth()
     ) {
-        val image = painterResource(R.drawable.android_logo)
+        val image = painterResource(R.drawable.man_avatar)
         Image(
             painter = image,
             contentDescription = null,
             modifier = Modifier
                 .size(150.dp)
-                .background(Color(0xFF0F492F))
+                .background(Color(0xFF1E8456))
                 .align(alignment = Alignment.CenterHorizontally)
         )
         Text(
@@ -88,7 +88,15 @@ fun TituloTarjeta(modifier: Modifier = Modifier) {
                 .align(alignment = Alignment.CenterHorizontally)
         )
         Text(
-            text = "Profesor IES La Paloma",
+            text = "Profesor Informática",
+            fontSize = 25.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .padding(10.dp),
+            color = Color(0xFF368543)
+        )
+        Text(
+            text = "IES La Paloma",
             fontSize = 25.sp,
             textAlign = TextAlign.Center,
             modifier = Modifier
@@ -115,7 +123,7 @@ fun DatosTarjeta(modifier: Modifier = Modifier) {
             )
             Spacer(Modifier.width(20.dp))
             Text(
-                text = "(+34) 699 699 157",
+                text = "(+34) 678 678 678",
                 fontSize = 20.sp
             )
         }
@@ -129,7 +137,7 @@ fun DatosTarjeta(modifier: Modifier = Modifier) {
             )
             Spacer(Modifier.width(20.dp))
             Text(
-                text = "rlopez.es@gmail.com",
+                text = "rlopezrodriguez@educa.madrid.org",
                 fontSize = 20.sp
             )
         }
